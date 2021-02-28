@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let howLong = window.prompt("how long do you like to stay here?");
+            howLong = parseInt(howLong);
+            let number = 0;
+            let ID = setInterval(function(){
+                howLong--;
+                if(howLong>0){
+                console.log(`you have ${howLong} left`);
+                }else{
+                    clearInterval(ID);
+                }
+            },1000);
+         
+        </script>
+    </head>
+    <body>
+        <p></p>
+    </body>
+</html>
