@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            window.alert("This program adds all the numbers you input");
+            let confirm = window.confirm("do you want to enter a number");
+            let result = 0;
+            while(confirm){
+                let number = window.prompt("enter a number");
+                number = parseInt(number);
+                result += number;
+                confirm = window.confirm("another number")
+            }
+            window.alert(`the result is ${result}`);
+        </script>
+    </head>
+</html>

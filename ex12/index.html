@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+           let howLong = 0;
+           let mainElement;
+           function greet(){
+               howLong++;
+               mainElement.innerHTML ="<span style='color: red;'>" + howLong.toString() + "</span>";
+           }
+           function ask(){
+            let yasNo = window.confirm("do you want to stay?");
+           if(yasNo == false){
+               clearInterval(id);
+               clearInterval(id2);
+
+           }
+           }
+           const id = setInterval(greet, 1000);
+           const id2 = setInterval(ask, 5000);
+         window.onload = function(){
+            mainElement = document.getElementById('main');
+         }
+        </script>
+    </head>
+    <body>
+        <p id='main'>
+
+        </p>
+    </body>
+</html>

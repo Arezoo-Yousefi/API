@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let userName = window.prompt("please enter your user name");
+            let password = window.prompt("please enter your password");
+            window.alert(`welcome ${userName}`);
+            let stayInPage;
+            setTimeout(function(){
+                stayInPage = window.confirm("Do you still want to be logged?");
+                if(stayInPage){
+                window.alert(`${userName} your session has been restored`);
+            }else{
+                window.alert(`${userName} your session has expaired`);
+            }
+            },10000);
+        </script>
+    </head>
+</html>
