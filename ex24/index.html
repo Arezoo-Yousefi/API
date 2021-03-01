@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Texts</title>
+  <script>
+      window.onload = function(){
+     const hElement = document.querySelector('h1');
+     hElement.style;
+     hElement.style.color = "red";
+     hElement.style.fontWeight = "normal";
+     hElement.style.textDecoration = "underline";
+     const pElement = document.querySelector('p');
+     pElement.style.color = "green";
+     pElement.style.fontWeight = "bold";
+     pElement.style.border = "1px solid black";
+     const ulElement = document.querySelector('ul');
+     ulElement.innerHTML = '<li></li><li></li><li></li>';
+     const liElements = document.querySelectorAll('li');
+     for(let i = 0; i < liElements.length; i++){
+         liElements[i].innerText = `item ${i + 1}`;
+     }
+     liElements[0].style.color = "lightblue";
+      }
+  </script>
+</head>
+<body>
+  <h1>Main Title</h1>
+  <p>This is a paragraph</p>
+  <ul></ul>
+</body>
+</html>
