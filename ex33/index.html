@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+    <script>
+        let firstButton = document.querySelector("button");
+        const aLink = document.querySelector('a');
+        function oneClick(){
+            alert('You clicked an event listened element');
+        }
+        function doubleClick(){
+            this.style.color = "red";
+        }
+        firstButton.addEventListener('dblclick', oneClick);
+        aLink.addEventListener('click', doubleClick);
+        const secondButt = document.getElementById("secondButton");
+        secondButt.onmouseover = doubleClick;
+
+    </script>
+  </body>
+</html>
