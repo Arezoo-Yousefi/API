@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Products</title>
+  </head>
+  <body>
+    <ul>
+      <li>Bannana</li>
+      <li>Apple</li>
+      <li>Peach</li>
+      <li>Eggs</li>
+      <li>Tomatto</li>
+      <li>Lettuce</li>
+      <li>Milk</li>
+    </ul>
+    <script>
+        const ulElement = document.querySelector('ul');
+        let liElements = ulElement.children;
+            let id = setInterval(function(){
+            if(liElements.length > 0){
+            const liElement = liElements[liElements.length - 1];
+            ulElement.removeChild(liElement);
+        }else{
+            clearInterval(id);
+        }
+        },2000);
+      
+        
+    </script>
+  </body>
+</html

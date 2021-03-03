@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+  </head>
+  <body>
+      <script>
+          let nameArray = ["Arezoo", "Mantra", "Ali", "Fateme", "Parmida", "Helia", "Zohre", "Reza", "Maryam", "Shiva"];
+          const ulElement = document.createElement('ul');
+          nameArray.forEach(element => {
+            const liElement = document.createElement('li');
+            liElement.innerText = element;
+            ulElement.appendChild(liElement);
+          });
+          document.body.appendChild(ulElement);
+          ulElement.style.color = "red";
+          const firstLi = document.querySelector('li');
+          firstLi.nextSibling.style.backgroundColor = "green";
+      </script>
+  </body>
+</html>

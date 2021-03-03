@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+  </head>
+  <body>
+      <script>
+          const numberArray = [];
+          const ulElement =document.createElement('ul')
+          for(let i = 0; i < 100; i++){
+              numberArray[i] = i +1;
+          }
+          numberArray.forEach(element =>{
+            const liElement = document.createElement('li');
+            liElement.innerText = `Item ${element} as li element content`;
+            ulElement.appendChild(liElement);
+            if(element % 2){
+                liElement.style.color = "#eee";
+            }else{
+                liElement.style.color = "#ddd";
+            }
+        })
+        document.body.appendChild(ulElement);
+        
+      </script>
+  </body>
+</html>
