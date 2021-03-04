@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+    <script>
+        const linkElement = document.querySelector('a');
+        function preventDefault(event){
+            event.preventDefault();
+        }
+        linkElement.onclick = preventDefault;
+    </script>
+  </body>
+</html>

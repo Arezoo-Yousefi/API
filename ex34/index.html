@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <script>
+        const firstButt = document.querySelector('button');
+        const secondButt = document.getElementById('secondButton');
+        /*function greet(){
+            alert("welcome"); 
+        }
+        */
+        function oneClick(){
+            alert('You clicked an event listened element');
+        }
+        /*
+        function doubleClick(){
+            this.style.color = "red";
+        }
+        */
+        firstButt.addEventListener('click', oneClick);
+        secondButt.onclick = function(){
+            firstButt.removeEventListener('click', oneClick);
+    }
+    </script>
+  </body>
+</html>

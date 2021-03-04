@@ -17,9 +17,12 @@
             this.style.color = "red";
         }
         firstButton.addEventListener('dblclick', oneClick);
-        aLink.addEventListener('click', doubleClick);
+        aLink.addEventListener('dblclick', doubleClick);
         const secondButt = document.getElementById("secondButton");
         secondButt.onmouseover = doubleClick;
+        aLink.addEventListener('click', function(event){
+          event.preventDefault();
+        })
 
     </script>
   </body>
