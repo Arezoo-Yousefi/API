@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .striked{
+                text-decoration: underline;
+            }
+           ul > li{
+            cursor: pointer;
+           } 
+        </style>
+    </head>
+    <body>
+
+        <script>
+            const bodyElement = document.querySelector('body');
+            let ulElement = document.createElement('ul');
+            let weeklyChores = ["washing", "cleaning", "cooking", "baking", "child caring", "ironing", "shopping", "driving", "designing", "eating"];
+            weeklyChores.forEach(element =>{
+                let liElement = document.createElement('li');
+                liElement.innerText = element;
+                ulElement.appendChild(liElement);
+                liElement.addEventListener("click", function(param){
+                    this.classList.toggle('striked');
+                    //liElement.classList.toggle('striked');
+                })
+            })
+            bodyElement.appendChild(ulElement);
+
+        </script>
+    </body>
+</html>

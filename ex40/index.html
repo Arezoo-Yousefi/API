@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+    <script>
+        const aLink = document.querySelector('a');
+        let colors =["red", "blue","green", "gray", "white"];
+        let colorIndex = -1;
+        aLink.onmouseover = function(){
+            colorIndex++;
+            if(colorIndex >= colors.length){
+                colorIndex = 0;
+            }
+            aLink.style.backgroundColor = colors[colorIndex];
+            
+        }
+        aLink.onmouseout = function(){
+            alert(`background color is ${colors[colorIndex]}`);
+        }
+    </script>
+  </body>
+</html>
