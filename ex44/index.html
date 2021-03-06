@@ -13,13 +13,15 @@
   <div></div>
   <script>
       const formElement = document.querySelector('form');
-      let userName = formElement.elements[0].value;
-      let passWord = formElement.elements[1].value;
-      userName = "morty";
-      passWord = 12345;
+      let userName = formElement.elements[0];
+      let passWord = formElement.elements[1];
+      userName.value = "morty";
+      passWord.value = 12345;
       const buttonElement = document.querySelector('button');
       buttonElement.onclick = function(){
-          alert(`${userName} : ${passWord}`);
+        let userName = formElement.elements[0].value;
+        let passWord = formElement.elements[1].value;
+        alert(`${userName} : ${passWord}`);
       }
   </script>
 </body>
